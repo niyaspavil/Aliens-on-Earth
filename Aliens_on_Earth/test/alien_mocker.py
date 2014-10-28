@@ -1,5 +1,5 @@
 class Aliens(object):
-    def __init__(self):
+    def __init__(self,*largs):
         self.code_name = "test_name"
         self.blood_color="test_color"
         self.no_of_antennas="test_no_1"

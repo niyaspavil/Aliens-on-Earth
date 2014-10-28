@@ -1,8 +1,9 @@
 import os
 import glob
+import importlib
 from os.path import basename, splitext 
 __plugins_dir__=os.path.dirname(os.path.abspath(__file__))+"/plugins"
-
+__pkg__="Alience_on_Earth.plugins"
 class Aliens(object):
     def __init__(self,details):
         self.code_name = details[0]
@@ -18,11 +19,17 @@ class Aliens(object):
 def register(details,ui):
     ui = ui
     alien = Aliens(details)
-    user_desired_format = prompt_format(ui)
+    formt = get_user_format(ui)
+    all_format = get_formats()
+    if formt in all_format:
+        mod=importlib.import_module("."+formt, __pkg__)
+        format_plug = getattr(mod,chnl)(engine, msg)
+        format_plug.create(alien)
+        return True
+    else:
+        return False
     
-    return True
-    
-def prompt_format(ui):
+def get_user_format(ui):
     all_format = get_formats()
     input = ''
     for format in all_format:
