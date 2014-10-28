@@ -14,6 +14,22 @@ class Aliens(object):
 
 
 
-def register(details):
+def register(details,ui):
+    ui = ui
     alien = Aliens(details)
+    all_format = get_formats()
+    
     return True
+
+
+def get_formats():
+    """returns list of available channel/plugins by searching
+    plugin directory"""
+    formats = []
+    format_files = glob.glob("{}/*.py".format(__plugins_dir__))
+    for format_file in format_files:
+        if format_file.endswith("__init__.py"):
+            continue
+        name, ext = splitext(basename(format_file))
+        formats.append(name)
+    return formats

@@ -19,12 +19,8 @@ class Ui(object):
 def main():
     ui = Ui()
     details = ui.get_details()
-    status = admin.register(details)
+    status = admin.register(details,ui)
     if status == True:
         print "suceessfully registered"
     else:
         print "registration failed"
-
-    
-
-
