@@ -1,2 +1,2 @@
 def rawinput(args):
-    return args
+    return 'test'
