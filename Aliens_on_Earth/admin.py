@@ -18,13 +18,20 @@ class Aliens(object):
 def register(details,ui):
     ui = ui
     alien = Aliens(details)
-    all_format = get_formats()
+    user_desired_format = prompt_format(ui)
     
     return True
-
+    
+def prompt_format(ui):
+    all_format = get_formats()
+    input = ''
+    for format in all_format:
+        input += format+'\n'
+    format =ui.prompt(input)
+    return format
 
 def get_formats():
-    """returns list of available channel/plugins by searching
+    """returns list of available fomats/plugins by searching
     plugin directory"""
     formats = []
     format_files = glob.glob("{}/*.py".format(__plugins_dir__))
