@@ -1,5 +1,5 @@
-from .. import register
+from .. import Terminal_ui
 from .raw_input_mocker import rawinput
-register.raw_input = rawinput
+.raw_input = rawinput
 def test_prompt():
-    assert register.prompt("test") == "test"
+    assert get_details.prompt("test") == "test"
