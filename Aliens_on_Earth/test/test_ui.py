@@ -6,3 +6,6 @@ def test_prompt():
 
 def test_get_details():
     assert ui.get_details()==('test','test','test','test','test')
+
+def test_main():
+    assert ui.main() == True
