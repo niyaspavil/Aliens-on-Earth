@@ -5,3 +5,5 @@ def test_Aliens():
     alien = admin.Aliens(details)
     assert alien.code_name == 'test_name'
     assert alien.home_planet == 'test_planet'
+
+
