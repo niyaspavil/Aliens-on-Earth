@@ -1,5 +1,6 @@
 import os
-
+import glob
+from os.path import basename, splitext 
 __plugins_dir__=os.path.dirname(os.path.abspath(__file__))+"/plugins"
 
 class Aliens(object):

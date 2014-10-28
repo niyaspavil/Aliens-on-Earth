@@ -1,3 +1,4 @@
+import os
 from .. import admin
 
 def test_Aliens():
@@ -7,3 +8,6 @@ def test_Aliens():
     assert alien.home_planet == 'test_planet'
 
 
+def test_get_format():
+    __plugins_dir__=os.path.dirname(os.path.abspath(__file__))+"/plugins"
+    assert admin.get_formats () == ['pdf','text_file']
