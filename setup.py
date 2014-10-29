@@ -6,7 +6,7 @@ setup(
     author='Niyas',
     author_email='pavilniyas@gmail.com',
     packages=find_packages(exclude=[]),
-    scripts=['Aliens_on_Earth'],
+    scripts=['register'],
     url='https://github.com/niyaspavil/Aliens-on-Earth',
     description='Aliens-on-Earth is an application to register Aliens details.' ,
     long_description=open('README.md').read(),
