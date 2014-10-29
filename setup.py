@@ -11,7 +11,7 @@ setup(
     description='Aliens-on-Earth is an application to register Aliens details.' ,
     long_description=open('README.md').read(),
     install_requires=[
-        "reportlab (3.1.8)",
+        "reportlab == 3.1.8"
 
 	
        ],
