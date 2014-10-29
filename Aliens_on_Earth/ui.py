@@ -3,7 +3,7 @@ class Ui(object):
     def __init__(self):
         pass
     def get_details(self):
-        print  '\n'+'\t'*3 +"Welcome to Registration.\n"
+        self.display( '\n'+'\t'*3 +"Welcome to Registration.\n" )
         code_name = self.prompt('Name code')
         blood_color =self. prompt('Blood color')
         no_of_antennas =self. prompt('Number of antennas')
@@ -14,13 +14,14 @@ class Ui(object):
 
     def prompt(self,message):
         return raw_input('\n'+message+':- ')
-
+    def display(self,message):
+        print message
 
 def main():
     ui = Ui()
     details = ui.get_details()
     status = admin.register(details,ui)
     if status == True:
-        print "suceessfully registered"
+        ui.display( "registration successed")
     else:
-        print "registration failed"
+        ui.display( "registration failed")

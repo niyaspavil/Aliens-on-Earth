@@ -6,7 +6,7 @@ class pdf(Format):
 
         
     def create(self):
-       """ method to create pdf """
+        """ method to create pdf """
         pdf_name = self.alien.code_name + '.pdf'
         try:
             c = canvas.Canvas(pdf_name,bottomup = 0)

@@ -8,6 +8,7 @@ class text_file(Format):
         name = self.alien.code_name+'.txt'
         try:
             f = open(name,'w')
+            f.write('\t'*4 + 'REGISTRATION DETAILS\n')
             f.write('Code Name:  ' + self.alien.code_name + '\n' +
                 'Blood Color:' +self.alien.blood_color + '\n' +
                 'No of Antennas:  '+self.alien.no_of_antennas + '\n' +

@@ -27,9 +27,11 @@ def register(details,ui):
         format_plug.create()
         return True
     else:
+        ui.display("Invalid format")
         return False
     
 def get_user_format(ui):
+    ui.display('\n\nChoose any format\n')
     all_format = get_formats()
     input = ''
     for format in all_format:

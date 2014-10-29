@@ -3,3 +3,5 @@ class Ui(object):
         pass
     def prompt(self,args):
         return "Test_format"
+    def display(self,args):
+        pass
