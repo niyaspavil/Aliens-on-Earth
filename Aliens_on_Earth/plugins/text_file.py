@@ -1,4 +1,4 @@
-class Text_File(object):
+class text_file(object):
     def __init__(self,alien):
         self.alien = alien
     

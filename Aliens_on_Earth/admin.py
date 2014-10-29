@@ -3,7 +3,7 @@ import glob
 import importlib
 from os.path import basename, splitext 
 __plugins_dir__=os.path.dirname(os.path.abspath(__file__))+"/plugins"
-__pkg__="Alience_on_Earth.plugins"
+__pkg__="Aliens_on_Earth.plugins"
 class Aliens(object):
     def __init__(self,details):
         self.code_name = details[0]
@@ -23,8 +23,8 @@ def register(details,ui):
     all_format = get_formats()
     if formt in all_format:
         mod=importlib.import_module("."+formt, __pkg__)
-        format_plug = getattr(mod,chnl)(engine, msg)
-        format_plug.create(alien)
+        format_plug = getattr(mod,formt)(alien)
+        format_plug.create()
         return True
     else:
         return False

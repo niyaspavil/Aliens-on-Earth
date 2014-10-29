@@ -1,6 +1,6 @@
 from reportlab.pdfgen import canvas
 
-class Pdf(object):
+class pdf(object):
     def __init__(self,alien):
         self.alien = alien
 
