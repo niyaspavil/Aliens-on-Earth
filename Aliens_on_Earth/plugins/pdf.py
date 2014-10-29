@@ -1,12 +1,12 @@
 from reportlab.pdfgen import canvas
-
-class pdf(object):
+from ..format import Format
+class pdf(Format):
     def __init__(self,alien):
         self.alien = alien
 
         
     def create(self):
-       
+       """ method to create pdf """
         pdf_name = self.alien.code_name + '.pdf'
         try:
             c = canvas.Canvas(pdf_name,bottomup = 0)
@@ -21,5 +21,5 @@ class pdf(object):
             c.drawString(30,130, 'Home Planet:  '+self.alien.home_planet)
             c.save()
         except Exception as e:
-            print e
+            raise e
         return True

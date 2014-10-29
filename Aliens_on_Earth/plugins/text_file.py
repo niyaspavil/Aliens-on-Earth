@@ -1,8 +1,10 @@
-class text_file(object):
+from .. format import Format
+class text_file(Format):
     def __init__(self,alien):
         self.alien = alien
     
     def create(self):
+        """ method to create text file """
         name = self.alien.code_name+'.txt'
         try:
             f = open(name,'w')
