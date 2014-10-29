@@ -8,7 +8,7 @@ setup(
     packages=find_packages(exclude=[]),
     scripts=['Aliens_on_Earth'],
     url='https://github.com/niyaspavil/Aliens-on-Earth',
-    description='Aliens-on-Earth is an application to register Aliens details. ,
+    description='Aliens-on-Earth is an application to register Aliens details.' ,
     long_description=open('README.md').read(),
     install_requires=[
         "reportlab (3.1.8)",
