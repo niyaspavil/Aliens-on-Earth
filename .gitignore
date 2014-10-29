@@ -6,3 +6,5 @@
 *.pdf
 .coverage
 htmlcov/
+dist/
+*.egg-info/
